@@ -9,10 +9,19 @@ import UIKit
 
 class RegistroViewController: UIViewController {
 
+    var recibirDatos: String?
+    
+    @IBOutlet weak var lblDatos: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+        
+        if recibirDatos == ""{
+            lblDatos.text = "no hay datos"
+        }else{
+            lblDatos.text = recibirDatos
+        }
     }
     
    
@@ -20,6 +29,7 @@ class RegistroViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+
    
 
 }

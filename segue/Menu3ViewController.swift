@@ -9,6 +9,7 @@ import UIKit
 
 class Menu3ViewController: UIViewController {
 
+    @IBOutlet weak var tfDatosM3: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,4 +24,8 @@ class Menu3ViewController: UIViewController {
         performSegue(withIdentifier: "unwind", sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let primerView = segue.destination as! ViewController
+        primerView.datosMenu3 = tfDatosM3.text!
+    }
 }

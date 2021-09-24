@@ -42,9 +42,16 @@
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Enviar"/>
                                 <connections>
-                                    <segue destination="6dF-c4-6A4" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="r6u-lz-4dP"/>
+                                    <action selector="btnEnviarDatos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LTT-xm-5TR"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Datos Menu 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKW-od-7hv">
+                                <rect key="frame" x="50" y="749" width="314" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -56,6 +63,11 @@
                             <constraint firstItem="Efu-qW-idc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="l7k-6O-Nzy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lblDatosMenu3" destination="FKW-od-7hv" id="j1S-nS-gOm"/>
+                        <outlet property="tfDatos" destination="DNQ-Ay-p4n" id="izy-g9-x4M"/>
+                        <segue destination="6dF-c4-6A4" kind="presentation" identifier="segueEnviarDatos" modalPresentationStyle="fullScreen" id="Fd0-Qw-kvM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -105,6 +117,13 @@
                                     <action selector="btnBack:" destination="6dF-c4-6A4" eventType="touchUpInside" id="2xx-gu-6dD"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DATO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZa-Lr-xnJ">
+                                <rect key="frame" x="50" y="493" width="314" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="47"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FO1-G4-mS6"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
@@ -115,6 +134,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0np-hm-KZS"/>
+                    <connections>
+                        <outlet property="lblDatos" destination="lZa-Lr-xnJ" id="zAS-fT-c7J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="shg-es-8aV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -163,6 +185,13 @@
                                     <action selector="btnBack:" destination="bfp-Nu-ztI" eventType="touchUpInside" id="1ad-lK-oC5"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Inserta algo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OSf-jp-dvl">
+                                <rect key="frame" x="87" y="489" width="247" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LnE-U8-MfB"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -174,6 +203,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="DWC-xd-SCe"/>
                     <connections>
+                        <outlet property="tfDatosM3" destination="OSf-jp-dvl" id="wCf-ag-Ntf"/>
                         <segue destination="2Ge-Xj-T5Y" kind="unwind" identifier="unwind" unwindAction="myUnwindActionWithUnwindSegue:" id="b14-tA-Cjx"/>
                     </connections>
                 </viewController>
@@ -193,6 +223,9 @@
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
